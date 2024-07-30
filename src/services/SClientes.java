@@ -5,6 +5,7 @@ import utils.PerfectFlow;
 
 public abstract class SClientes {
 
+
     public static void use(String action, Clientes clientes) {
         switch (action) {
             case "cadastrar":
@@ -19,7 +20,6 @@ public abstract class SClientes {
             case "deletar":
                 deletar(clientes);
                 break;
-
         }
 
     }
@@ -31,9 +31,7 @@ public abstract class SClientes {
     }
 
     private static void listar() {
-        if (!PerfectFlow.verifyNullObj(clientes)) {
-            System.out.println("listando clientes");
-        }
+        SClientes.listar();
     }
 
     private static void alterar(Clientes clientes) {

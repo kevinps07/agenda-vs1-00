@@ -12,6 +12,10 @@ public class PerfectFlow {
     private static final int ALLOWED_YEARS = 18;
     private static final Float ALLOWED_MAX_FLOAT = 100f;
     private static Boolean nullObject = false;
+    public static final Boolean ADMIN = true;
+    public static final Boolean USER = false;
+
+
 
     /**
      * @param allow inserir um valor do tipo float
