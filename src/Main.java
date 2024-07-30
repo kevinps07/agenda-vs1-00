@@ -1,11 +1,22 @@
+import entitty.Clientes;
+import entitty.Usuarios;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
+
     public static void main(String[] args) {
+        Usuarios usuario = new Usuarios("maradona", "maradonaemelhorquepele123");
+        usuario.cadastrar();
 
-        Usuario usuario = new Usuario("cheirapo", "pernalonga123");
+        Clientes clientes = new Clientes();
+        clientes.setNome("jose");
+        clientes.setSaldoLimite(50f);
+        clientes.concluir(usuario);
 
-        System.out.println(usuario);
+
 
     }
+
 }

@@ -1,3 +1,6 @@
+package entitty;
+
+import services.SClientes;
 import utils.PerfectFlow;
 
 import java.util.ArrayList;
@@ -9,6 +12,7 @@ public class Clientes {
     private Long id;
     private String nome;
     private Float saldoLimite;
+    private Usuarios usuario;
     private List<Notas> listAnotacoes = new ArrayList<Notas>();
 
 
@@ -28,6 +32,7 @@ public class Clientes {
     public String toString() {
         return this.nome;
     }
+
     public String getNome() {
         return nome;
     }
@@ -41,11 +46,16 @@ public class Clientes {
     }
 
     public void setSaldoLimite(Float saldoLimite) {
-        if (PerfectFlow.allowedMax(saldoLimite)){
+        if (PerfectFlow.allowedMax(saldoLimite)) {
             this.saldoLimite = saldoLimite;
         } else {
             System.out.println("Valor está além do permitido!");
         }
+    }
+
+    public void concluir(Usuarios usuario) {
+        this.usuario = usuario;
+        SClientes.use(PerfectFlow.getMethodName(), this);
     }
 
 }
