@@ -18,6 +18,7 @@ public abstract class SClientes {
                 break;
             case "deletar":
                 deletar(clientes);
+                break;
 
         }
 
