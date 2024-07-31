@@ -5,7 +5,6 @@ import utils.PerfectFlow;
 
 public abstract class SClientes {
 
-
     public static void use(String action, Clientes clientes) {
         switch (action) {
             case "cadastrar":
@@ -21,7 +20,6 @@ public abstract class SClientes {
                 deletar(clientes);
                 break;
         }
-
     }
 
     private static void cadastrar(Clientes clientes) {

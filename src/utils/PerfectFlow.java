@@ -40,7 +40,7 @@ public class PerfectFlow {
     }
 
     public static long generateUUID(){
-        return UUID.randomUUID().getLeastSignificantBits();
+        return UUID.randomUUID().getLeastSignificantBits() * (-1);
     }
 
     public static UUID generateUUID(String name){

@@ -14,6 +14,12 @@ public abstract class SUsuarios {
              case "listar":
                  listar();
                  break;
+             case "alterar":
+                 alterar(usuario);
+                 break;
+             case "deletar":
+                 deletar(usuario);
+                 break;
          }
     };
 
